@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mond-Zyklus Kalender</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0d1117; color: #c9d1d9; display: flex; align-items: center; justify-content: center; min-height: 100-vh; margin: 0; padding: 20px; text-align: center; }
+        .card { max-width: 400px; padding: 30px; background: #161b22; border-radius: 16px; border: 1px solid #30363d; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #58a6ff; font-size: 24px; margin-bottom: 10px; }
+        p { line-height: 1.6; font-size: 15px; color: #8b949e; }
+        .btn { display: block; width: 100%; padding: 15px; margin: 15px 0; border-radius: 8px; text-decoration: none; font-weight: bold; transition: transform 0.2s; }
+        .apple { background-color: #f5f5f7; color: #1d1d1f; }
+        .google { background-color: #4285f4; color: white; }
+        .btn:active { transform: scale(0.98); }
+        .footer { font-size: 12px; margin-top: 20px; color: #484f58; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🌑 Mond-Zyklus</h1>
+        <p>Synchronisiere dein Leben mit den natürlichen Rhythmen.<br>
+           <b>28-Tage-Resonanz | Rauhtage | Mondphasen</b></p>
+        
+        <p style="font-size: 13px;">Wähle dein System zum Abonnieren:</p>
+
+        <a href="webcal://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" class="btn apple">
+             Für iPhone / Mac
+        </a>
+
+        <a href="https://www.google.com/calendar/render?cid=https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" class="btn google">
+            G Für Android / Google
+        </a>
+
+        <div class="footer">
+            Läuft automatisch bis 2031.<br>
+            Keine Datenerhebung. Nur Natur.
+        </div>
+    </div>
+</body>
+</html>
