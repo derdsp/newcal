@@ -3,67 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mond-Zyklus Kalender | Lunar Cycle</title>
+    
+    <title>Mond-Zyklus | Die neue Zeitrechnung</title>
+    <meta name="description" content="Synchronisiere dein Leben mit dem 28-Tage-Rhythmus. Astronomisch präzise bis 2031.">
+    <meta property="og:title" content="🌑 Mond-Zyklus Kalender">
+    <meta property="og:description" content="2012 war kein Ende, sondern ein Neubeginn. Hol dir den galaktischen Rhythmus auf dein Handy.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/derdsp/newcal/main/preview.jpg"> <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/derdsp/newcal/main/icon.png">
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0d1117; color: #c9d1d9; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
-        .card { max-width: 450px; padding: 30px; background: #161b22; border-radius: 20px; border: 1px solid #30363d; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
-        h1 { color: #58a6ff; font-size: 26px; margin-bottom: 10px; }
-        p { line-height: 1.6; font-size: 15px; color: #8b949e; margin-bottom: 25px; }
-        .btn { display: block; width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; text-decoration: none; font-weight: bold; transition: all 0.2s; border: none; cursor: pointer; font-size: 16px; box-sizing: border-box; }
-        .apple { background-color: #f5f5f7; color: #1d1d1f; }
-        .google { background-color: #4285f4; color: white; }
-        .help-section { background: #1c2128; padding: 15px; border-radius: 12px; margin-top: 25px; text-align: left; font-size: 13px; border: 1px dashed #484f58; }
-        .help-section h3 { margin-top: 0; font-size: 15px; color: #58a6ff; }
-        .copy-btn { background-color: #30363d; color: #c9d1d9; font-size: 12px; padding: 8px 12px; border-radius: 6px; border: 1px solid #444; cursor: pointer; margin: 10px 0; }
-        details { cursor: pointer; color: #58a6ff; margin-top: 10px; }
-        summary { font-weight: bold; margin-bottom: 10px; }
-        .instruction-box { color: #8b949e; line-height: 1.5; padding-top: 10px; border-top: 1px solid #30363d; margin-top: 10px; }
-        .footer { font-size: 11px; margin-top: 30px; color: #484f58; border-top: 1px solid #30363d; padding-top: 15px; }
+        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; }
+        body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .card { max-width: 440px; background: var(--card); padding: 30px; border-radius: 24px; border: 1px solid #30363d; box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        h1 { font-size: 28px; margin-bottom: 8px; color: var(--accent); }
+        .subtitle { color: #8b949e; margin-bottom: 25px; line-height: 1.5; }
+        .btn { display: block; width: 100%; padding: 16px; margin: 12px 0; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.2s; border: none; cursor: pointer; box-sizing: border-box; }
+        .apple { background: #f5f5f7; color: #1d1d1f; }
+        .google { background: #4285f4; color: white; }
+        .share-btn { background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-top: 20px; }
+        .help-section { background: #1c2128; padding: 15px; border-radius: 12px; margin-top: 20px; text-align: left; font-size: 13px; border: 1px dashed #484f58; }
+        details { cursor: pointer; color: var(--accent); }
+        .footer { font-size: 11px; margin-top: 30px; color: #484f58; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🌑 Mond und Zyklus Kalender</h1>
-        <p>Synchronisiere dich mit dem kosmischen 28-Tage-Rhythmus der weiblichen Kraft des Mondes und der Sonne im Jahresverlauf.<br>
-           <b>Mondphasenkalender in Resonanz mit dem weiblichen Biorythmus während eines Sonnenjahres</b></p>
-        
-        <a href="webcal://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" class="btn apple">
-             iPhone / Mac / Outlook
-        </a>
 
-        <a href="https://calendar.google.com/calendar/render?cid=https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" target="_blank" class="btn google">
-            G Android / Google Kalender
-        </a>
-
-        <div class="help-section">
-            <h3>Probleme beim Abonnieren?</h3>
-            1. Link kopieren:<br>
-            <button class="copy-btn" onclick="copyLink()">URL kopieren / Copy URL</button>
-
-            <details>
-                <summary>Anleitung / Instructions (Android/Google)</summary>
-                <div class="instruction-box">
-                    <strong>Deutsch:</strong><br>
-                    Gehe am PC auf calendar.google.com (oder am Handy "Desktop-Ansicht"). Klicke auf das (+) neben „Weitere Kalender“ -> „Per URL“. Füge den Link ein und klicke „Kalender hinzufügen“. In der Handy-App ggf. manuell synchronisieren.<br><br>
-                    <strong>English:</strong><br>
-                    Go to calendar.google.com on a PC (or use "Desktop site" on mobile). Click (+) next to "Other calendars" -> "From URL". Paste the link and click "Add calendar". In the mobile app, you may need to refresh/sync manually.
-                </div>
-            </details>
-        </div>
-
-        <div class="footer">
-            2026–2031 | Wartungsfrei & Anonym.<br>
-            Open Source @derdsp
-        </div>
+<div class="card">
+    <h1>🌑 Mond-Zyklus</h1>
+    <div class="subtitle">
+        Seit der galaktischen Neuausrichtung 2012 folgen wir dem 19-jährigen Meton-Zyklus. Synchronisiere dich mit dem 28-Tage-Puls der weiblichen Kraft des Mond-Zyklus in Harmonie mit dem männlichen Sonnenjahr.
     </div>
 
-    <script>
-        function copyLink() {
-            const url = "https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics";
-            navigator.clipboard.writeText(url).then(() => {
-                alert("Link kopiert! / Link copied!");
-            });
+    <a href="webcal://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" class="btn apple">
+         iPhone / Outlook / Mac
+    </a>
+
+    <a href="https://calendar.google.com/calendar/render?cid=https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" target="_blank" class="btn google">
+        G Android / Google
+    </a>
+
+    <div class="help-section">
+        <details>
+            <summary>Anleitung & Hilfe (Copy URL)</summary>
+            <div style="padding-top:10px; color:#8b949e;">
+                Link kopieren und im Google/Outlook-Kalender unter "Per URL hinzufügen" einfügen.<br>
+                <button onclick="copyLink()" style="background:#30363d; color:white; border:none; padding:8px; border-radius:6px; margin-top:10px; cursor:pointer;">Link kopieren</button>
+            </div>
+        </details>
+    </div>
+
+    <button class="btn share-btn" onclick="shareApp()">✨ Mit anderen teilen</button>
+
+    <div class="footer">
+        Astronomisch präzise bis 2031.<br>
+        Open Source & Anonym.
+    </div>
+</div>
+
+<script>
+    const calendarUrl = "https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics";
+    const appUrl = window.location.href;
+
+    function copyLink() {
+        navigator.clipboard.writeText(calendarUrl).then(() => alert("Kalender-Link kopiert!"));
+    }
+
+    async function shareApp() {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Mond-Zyklus Kalender',
+                    text: 'Hol dir den echten 28-Tage-Rhythmus auf dein Handy. Astronomisch präzise bis 2031.',
+                    url: appUrl,
+                });
+            } catch (err) { console.log("Teilen abgebrochen"); }
+        } else {
+            alert("Kopiere einfach diesen Link zum Teilen: " + appUrl);
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
