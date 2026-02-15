@@ -37,7 +37,7 @@ An astronomically precise calendar based on the biological 28-day rhythm and nat
 ### How to Subscribe (Smartphone/Desktop)
 To integrate this calendar into your device (auto-updates until 2031), use the following link:
 
-👉 `webcal://raw.githubusercontent.com/[DEIN_NUTZERNAME]/mond-zyklus/main/mond_zyklus_live.ics`
+https://derdsp.github.io/newcal/
 
 * **iPhone/Mac:** Click or copy the link and add it as a "New Calendar Subscription" in your Calendar app.
 * **Android/Google:** Copy the link (replace `webcal` with `https` if necessary) and add it via "From URL" in Google Calendar settings.
