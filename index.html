@@ -3,39 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mond-Zyklus Kalender</title>
+    <title>Mond-Zyklus Kalender | Lunar Cycle</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0d1117; color: #c9d1d9; display: flex; align-items: center; justify-content: center; min-height: 100-vh; margin: 0; padding: 20px; text-align: center; }
-        .card { max-width: 400px; padding: 30px; background: #161b22; border-radius: 16px; border: 1px solid #30363d; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #58a6ff; font-size: 24px; margin-bottom: 10px; }
-        p { line-height: 1.6; font-size: 15px; color: #8b949e; }
-        .btn { display: block; width: 100%; padding: 15px; margin: 15px 0; border-radius: 8px; text-decoration: none; font-weight: bold; transition: transform 0.2s; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0d1117; color: #c9d1d9; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
+        .card { max-width: 420px; padding: 30px; background: #161b22; border-radius: 20px; border: 1px solid #30363d; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
+        h1 { color: #58a6ff; font-size: 26px; margin-bottom: 10px; letter-spacing: -0.5px; }
+        p { line-height: 1.6; font-size: 15px; color: #8b949e; margin-bottom: 25px; }
+        .btn { display: block; width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; text-decoration: none; font-weight: bold; transition: all 0.2s; border: none; cursor: pointer; font-size: 16px; box-sizing: border-box; }
         .apple { background-color: #f5f5f7; color: #1d1d1f; }
         .google { background-color: #4285f4; color: white; }
-        .btn:active { transform: scale(0.98); }
-        .footer { font-size: 12px; margin-top: 20px; color: #484f58; }
+        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .help-section { background: #1c2128; padding: 18px; border-radius: 12px; margin-top: 25px; text-align: left; font-size: 13px; border: 1px dashed #484f58; }
+        .help-section h3 { margin-top: 0; font-size: 14px; color: #58a6ff; margin-bottom: 8px; }
+        .copy-btn { background-color: #30363d; color: #c9d1d9; font-size: 12px; padding: 8px 12px; border-radius: 6px; border: 1px solid #444; cursor: pointer; margin-top: 10px; width: auto; display: inline-block; }
+        .footer { font-size: 11px; margin-top: 30px; color: #484f58; border-top: 1px solid #30363d; padding-top: 15px; }
+        hr { border: 0; border-top: 1px solid #30363d; margin: 20px 0; }
     </style>
 </head>
 <body>
     <div class="card">
         <h1>🌑 Mond-Zyklus</h1>
-        <p>Synchronisiere dein Leben mit den natürlichen Rhythmen.<br>
-           <b>28-Tage-Resonanz | Rauhtage | Mondphasen</b></p>
+        <p>Synchronisiere dich mit dem biologischen 28-Tage-Rhythmus.<br>
+           <b>Resonanz | Rauhtage | Mondphasen</b></p>
         
-        <p style="font-size: 13px;">Wähle dein System zum Abonnieren:</p>
-
         <a href="webcal://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" class="btn apple">
-             Für iPhone / Mac
+             iPhone / Mac / Outlook
         </a>
 
-        <a href="https://www.google.com/calendar/render?cid=https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" class="btn google">
-            G Für Android / Google
+        <a href="https://calendar.google.com/calendar/render?cid=https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics" target="_blank" class="btn google">
+            G Android / Google Kalender
         </a>
+
+        <div class="help-section">
+            <h3>Probleme beim Abonnieren?</h3>
+            Falls die Buttons nicht direkt funktionieren: <br>
+            1. Link kopieren:<br>
+            <button class="copy-btn" onclick="copyLink()">URL in Zwischenablage kopieren</button><br><br>
+            2. Kalender-App am PC/Browser öffnen.<br>
+            3. "Kalender hinzufügen" &rarr; "Aus dem Web" wählen und Link einfügen.
+        </div>
 
         <div class="footer">
-            Läuft automatisch bis 2031.<br>
-            Keine Datenerhebung. Nur Natur.
+            2026–2031 | Wartungsfrei & Anonym.<br>
+            Open Source auf GitHub @derdsp
         </div>
     </div>
+
+    <script>
+        function copyLink() {
+            const url = "https://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics";
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link kopiert! Nutze ihn in deiner Kalender-App unter 'Kalender hinzufügen' -> 'Per URL'.");
+            });
+        }
+    </script>
 </body>
 </html>
