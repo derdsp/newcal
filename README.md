@@ -17,7 +17,7 @@ Dieser Kalender synchronisiert dein Zeitgefühl mit den tatsächlichen Bewegunge
 ### Den Kalender abonnieren (Smartphone/Desktop)
 Um diesen Kalender live in deinem Handy zu haben (er aktualisiert sich automatisch bis 2031), nutze diesen Link:
 
-👉 `webcal://raw.githubusercontent.com/derdsp/newcal/main/mond_zyklus_live.ics`
+https://derdsp.github.io/newcal/
 
 * **iPhone/Mac:** Link anklicken oder kopieren und in der Kalender-App unter "Abonnement" einfügen.
 * **Android/Google:** Link kopieren (ggf. `webcal` durch `https` ersetzen) und im Google Kalender unter "Über URL hinzufügen" einfügen.
